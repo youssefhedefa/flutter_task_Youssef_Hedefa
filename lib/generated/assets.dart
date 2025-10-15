@@ -12,5 +12,6 @@ class Assets {
   static const String tajawalTajawalMedium = 'assets/fonts/tajawal/Tajawal-Medium.ttf';
   static const String tajawalTajawalRegular = 'assets/fonts/tajawal/Tajawal-Regular.ttf';
   static const String translationsAr = 'assets/translations/ar.json';
+  static const String translationsEn = 'assets/translations/en.json';
 
 }

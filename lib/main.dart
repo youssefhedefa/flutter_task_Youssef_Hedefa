@@ -5,6 +5,8 @@ import 'package:flutter_task/app/init_services.dart';
 import 'package:flutter_task/core/constants/app_string_constants.dart';
 
 main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
   await InitServices().init();
   runApp(
     EasyLocalization(

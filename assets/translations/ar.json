@@ -1,3 +1,16 @@
 {
-
+  "home": "الرئيسية",
+  "chat": "محادثة",
+  "add_ad": "أضف إعلان",
+  "my_ads": "إعلاناتى",
+  "my_account": "حسابى",
+  "explore_offers": "أستكشف العروض",
+  "all": "الكل",
+  "choose_packages": "أختر الباقات اللى تناسبك",
+  "choose_package_description": "أختار من باقات التمييز بالأسفل اللى تناسب أحتياجاتك",
+  "next": "التالى",
+  "custom_packages": "باقات مخصصة لك",
+  "contact_us_for_package": "تواصل معنا لأختيار الباقة المناسبة لك",
+  "sales_team": "فريق المبيعات",
+  "view_results": "شاهد 10,000+ نتائج"
 }

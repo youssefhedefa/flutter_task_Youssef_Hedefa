@@ -12,8 +12,6 @@ class InitServices {
   }
 
   Future<void> init() async {
-    WidgetsFlutterBinding.ensureInitialized();
-    await EasyLocalization.ensureInitialized();
     makeStatusBarTransparent();
   }
 

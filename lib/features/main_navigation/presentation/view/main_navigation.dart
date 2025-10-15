@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_task/features/main_navigation/presentation/controllers/main_navigation_cubit/main_navigation_cubit.dart';
 import 'package:flutter_task/features/main_navigation/presentation/view/widgets/custom_bottom_nav_bar.dart';
 
 class MainNavigationView extends StatefulWidget {
@@ -11,8 +13,18 @@ class MainNavigationView extends StatefulWidget {
 class _MainNavigationViewState extends State<MainNavigationView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: CustomBottomNavBar(),
+    return BlocProvider(
+      create: (context) => MainNavigationCubit(),
+      child: BlocBuilder<MainNavigationCubit, MainNavigationState>(
+        builder: (context, state) {
+          return Scaffold(
+              body: state.views[state.currentIndex],
+              bottomNavigationBar: CustomBottomNavBar(
+                state: state,
+              ),
+          );
+        },
+      ),
     );
   }
 }
