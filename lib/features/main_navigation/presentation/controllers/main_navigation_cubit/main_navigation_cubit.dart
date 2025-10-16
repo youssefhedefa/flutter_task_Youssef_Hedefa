@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_task/features/home/presentation/view/home_view.dart';
 
 part 'main_navigation_state.dart';
 

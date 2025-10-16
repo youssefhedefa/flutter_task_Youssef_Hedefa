@@ -7,7 +7,7 @@ class MainNavigationState extends Equatable {
   const MainNavigationState({
     this.currentIndex = 0,
     this.views = const [
-      Center(child: Text('Home View')),
+      HomeView(),
       Center(child: Text('Search View')),
       Center(child: Text('Add View')),
       Center(child: Text('Notifications View')),

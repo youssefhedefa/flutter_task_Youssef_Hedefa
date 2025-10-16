@@ -18,7 +18,7 @@ class _MainNavigationViewState extends State<MainNavigationView> {
       child: BlocBuilder<MainNavigationCubit, MainNavigationState>(
         builder: (context, state) {
           return Scaffold(
-              body: state.views[state.currentIndex],
+              body: SafeArea(child: state.views[state.currentIndex]),
               bottomNavigationBar: CustomBottomNavBar(
                 state: state,
               ),
