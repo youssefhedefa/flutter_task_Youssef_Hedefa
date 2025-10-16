@@ -69,7 +69,9 @@ class HomeCubit extends Cubit<HomeState> {
   Future<void> fetchProducts() async {
     emit(state.copyWith(fetchProductsRequestStatus: RequestStatusEnum.loading));
     final result = await _homeReo.fetchProducts(
-      categoryId: state.categories.first.id == state.selectedCategoryId
+      categoryId:
+          (state.categories.isEmpty ||
+              (state.categories.first.id) == state.selectedCategoryId)
           ? null
           : state.selectedCategoryId,
     );

@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_task/core/components/widgets/custom_image_viewer.dart';
 import 'package:flutter_task/core/components/widgets/custom_svg_builder.dart';
 import 'package:flutter_task/core/extensions/theming_extension.dart';
+import 'package:flutter_task/features/home/data/models/product_model.dart';
 import 'package:flutter_task/features/home/presentation/view/widgets/add_to_cart_button_widget.dart';
 import 'package:flutter_task/features/home/presentation/view/widgets/favorite_button_widget.dart';
 import 'package:flutter_task/generated/assets.dart';
 
 class ProductItemWidget extends StatelessWidget {
-  const ProductItemWidget({super.key});
+  const ProductItemWidget({super.key, required this.model});
+
+  final ProductModel model;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +28,7 @@ class ProductItemWidget extends StatelessWidget {
         children: [
           ColoredBox(
             color: appColors.borderColor.withValues(alpha: .05),
-            child: Image.asset(Assets.imagesSweetShirt),
+            child: ImageViewerWidget(imagePath: model.imagePath),
           ),
           4.verticalSpace,
           Expanded(
@@ -37,7 +41,7 @@ class ProductItemWidget extends StatelessWidget {
                     children: [
                       Expanded(
                         child: Text(
-                          'جاكيت من الصوف مناسب',
+                          model.name,
                           style: textStyle.font14Medium,
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
@@ -58,11 +62,11 @@ class ProductItemWidget extends StatelessWidget {
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           text: TextSpan(
-                            text: '32,000,000جم',
+                            text: '${model.currentPrice}جم',
                             style: textStyle.font14MediumRedColor,
                             children: <TextSpan>[
                               TextSpan(
-                                text: '60,000,000جم',
+                                text: ' / ${model.priceBeforeDiscount}جم',
                                 style: textStyle.font12Regular,
                               ),
                             ],
@@ -82,7 +86,7 @@ class ProductItemWidget extends StatelessWidget {
                       ),
                       4.horizontalSpace,
                       Text(
-                        'تم بيع 3.3k+',
+                        'تم بيع ${model.numberOfSales}k+',
                         style: textStyle.font10RegularGreyColor,
                       ),
                     ],
