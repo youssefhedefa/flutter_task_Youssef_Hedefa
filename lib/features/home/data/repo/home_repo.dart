@@ -12,8 +12,10 @@ class HomeReo {
 
   Future<Either<String, List<CategoryModel>>> fetchTextCategories() async {
     try {
-      final result = await _databaseService.readAll(
+      final result = await _databaseService.readWhere(
         table: DatabaseConstants.tableCategories,
+        where: '${DatabaseConstants.columnImageUrl} IS NULL',
+        whereArgs: [],
       );
       final categories = result.map((e) => CategoryModel.fromJson(e)).toList();
       return Right(categories);

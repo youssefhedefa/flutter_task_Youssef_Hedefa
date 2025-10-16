@@ -1,4 +1,6 @@
 import 'package:flutter_task/core/database/database_helper.dart';
+import 'package:flutter_task/features/home/data/repo/home_repo.dart';
+import 'package:flutter_task/features/home/presentation/cubit/home_cubit.dart';
 import 'package:get_it/get_it.dart';
 import 'package:flutter_task/core/database/database_service.dart';
 
@@ -10,6 +12,18 @@ Future<void> initServiceLocator() async {
   sl.registerLazySingleton<DatabaseService>(
     () => DatabaseService(
       dbHelper: sl<DatabaseHelper>(),
+    ),
+  );
+
+  sl.registerLazySingleton<HomeReo>(
+    () => HomeReo(
+      databaseService: sl<DatabaseService>(),
+    ),
+  );
+
+  sl.registerFactory<HomeCubit>(
+    () => HomeCubit(
+      homeRepo: sl<HomeReo>(),
     ),
   );
 }

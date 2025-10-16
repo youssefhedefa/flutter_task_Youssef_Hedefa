@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_task/core/components/widgets/custom_image_viewer.dart';
 import 'package:flutter_task/core/extensions/theming_extension.dart';
-import 'package:flutter_task/generated/assets.dart';
 
 class ImageTextFilterWidget extends StatelessWidget {
   const ImageTextFilterWidget({
@@ -22,7 +22,9 @@ class ImageTextFilterWidget extends StatelessWidget {
             color: context.appColors.borderColor,
             borderRadius: BorderRadius.circular(4),
           ),
-          child: Image.asset(Assets.imagesMan),
+          child: ImageViewerWidget(
+            imagePath: imagePath,
+          ),
         ),
         Text(
           text,
