@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_task/core/extensions/localization_extensions.dart';
+import 'package:flutter_task/core/extensions/theming_extension.dart';
 import 'package:flutter_task/features/main_navigation/presentation/controllers/main_navigation_cubit/main_navigation_cubit.dart';
 import 'package:flutter_task/features/main_navigation/presentation/view/widgets/custom_bottom_nav_bar_item.dart';
 import 'package:flutter_task/generated/assets.dart';
@@ -44,6 +45,7 @@ class CustomBottomNavBar extends StatelessWidget {
             label: context.addAd,
             iconPath: Assets.iconsAddAd,
             isSelected: false,
+            iconColor: context.appColors.primaryColor,
             onTap: () {},
           ),
           CustomBottomNavBarItem(

@@ -6,20 +6,25 @@ import 'package:flutter_task/core/themes/app_text_styles.dart';
 abstract class AppTextStylesSchemes {
   static final AppColors _lightColors = AppColorsSchemes.lightColor;
   static AppTextStyles lightTextStyles = AppTextStyles(
+    font12Medium: TextStyle(
+      fontSize: 12,
+      fontWeight: FontWeight.w500,
+      color: _lightColors.selectedColor,
+    ),
     font14Medium: TextStyle(
       fontSize: 14,
       fontWeight: FontWeight.w500,
-      color: _lightColors.primaryColor,
+      color: _lightColors.selectedColor,
     ),
     font16Medium: TextStyle(
       fontSize: 16,
       fontWeight: FontWeight.w500,
-      color: _lightColors.primaryColor,
+      color: _lightColors.selectedColor,
     ),
     font10Regular: TextStyle(
       fontSize: 10,
       fontWeight: FontWeight.w400,
-      color: _lightColors.primaryColor,
+      color: _lightColors.selectedColor,
     ),
     font10RegularGreyColor: TextStyle(
       fontSize: 10,
@@ -29,7 +34,7 @@ abstract class AppTextStylesSchemes {
     font12Regular: TextStyle(
       fontSize: 12,
       fontWeight: FontWeight.w400,
-      color: _lightColors.primaryColor,
+      color: _lightColors.selectedColor,
     ),
     font12RegularSuccessColor: TextStyle(
       fontSize: 12,

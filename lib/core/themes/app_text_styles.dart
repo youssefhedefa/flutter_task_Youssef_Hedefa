@@ -7,6 +7,7 @@ class AppTextStyles extends ThemeExtension<AppTextStyles> {
 
   final TextStyle font12Regular;
   final TextStyle font12RegularSuccessColor;
+  final TextStyle font12Medium;
 
   final TextStyle font14Medium;
   final TextStyle font14MediumOrangeColor;
@@ -19,6 +20,7 @@ class AppTextStyles extends ThemeExtension<AppTextStyles> {
 
   const AppTextStyles({
     required this.font12Regular,
+    required this.font12Medium,
     required this.font14MediumOrangeColor,
     required this.font14MediumGreyColor,
     required this.font16Medium,
@@ -43,6 +45,7 @@ class AppTextStyles extends ThemeExtension<AppTextStyles> {
       font12RegularSuccessColor: font12RegularSuccessColor,
       font14Medium: font14Medium,
       font14MediumRedColor: font14MediumRedColor,
+      font12Medium: font12Medium,
     );
   }
 
@@ -65,6 +68,7 @@ class AppTextStyles extends ThemeExtension<AppTextStyles> {
       font12RegularSuccessColor: _lerpTextStyle(font12RegularSuccessColor, other.font12RegularSuccessColor, t),
       font14Medium: _lerpTextStyle(font14Medium, other.font14Medium, t),
       font14MediumRedColor: _lerpTextStyle(font14MediumRedColor, other.font14MediumRedColor, t),
+      font12Medium: _lerpTextStyle(font12Medium, other.font12Medium, t),
     );
   }
 
