@@ -7,23 +7,23 @@ class ProductsGridView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: GridView.builder(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          childAspectRatio: 158 / 360,
-          mainAxisSpacing: 12.0,
-          crossAxisSpacing: 12.0,
-        ),
-        padding: EdgeInsets.symmetric(
-          horizontal: AppNumConstants.defaultPadding,
-          vertical: AppNumConstants.defaultPadding,
-        ),
-        itemBuilder: (context, index) {
-          return const ProductItemWidget();
-        },
-        itemCount: 20,
+    return GridView.builder(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        childAspectRatio: 158 / 360,
+        mainAxisSpacing: 12.0,
+        crossAxisSpacing: 12.0,
       ),
+      padding: EdgeInsets.symmetric(
+        horizontal: AppNumConstants.defaultPadding,
+        vertical: AppNumConstants.defaultPadding,
+      ),
+      itemBuilder: (context, index) {
+        return const ProductItemWidget();
+      },
+      itemCount: 20,
     );
   }
 }

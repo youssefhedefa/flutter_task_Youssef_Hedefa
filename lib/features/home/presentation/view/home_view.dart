@@ -11,24 +11,73 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(
-        top: 45.h,
-      ),
+    return CustomScrollView(
+      slivers: [
+        SliverPadding(
+          padding: EdgeInsets.only(top: 45.h),
+          sliver: SliverToBoxAdapter(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const ExploreOffersWidget(),
+                12.verticalSpace,
+              ],
+            ),
+          ),
+        ),
+        SliverPersistentHeader(
+          pinned: true,
+          delegate: _TextFilterHeaderDelegate(
+            child: const TextFilterListWidget(),
+          ),
+        ),
+        SliverPadding(
+          padding: EdgeInsets.symmetric(vertical: 33.h),
+          sliver: const SliverToBoxAdapter(
+            child: ImageTextFilterListWidget(),
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const OfferBannerWidget(),
+              4.verticalSpace,
+              const ProductsGridView(),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class _TextFilterHeaderDelegate extends SliverPersistentHeaderDelegate {
+  final Widget child;
+
+  _TextFilterHeaderDelegate({required this.child});
+
+  @override
+  double get minExtent => 41.h + 12.h;
+
+  @override
+  double get maxExtent => 41.h + 12.h;
+
+  @override
+  Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {
+    return Container(
+      color: Theme.of(context).scaffoldBackgroundColor,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const ExploreOffersWidget(),
+          child,
           12.verticalSpace,
-          const TextFilterListWidget(),
-          33.verticalSpace,
-          const ImageTextFilterListWidget(),
-          33.verticalSpace,
-          const OfferBannerWidget(),
-          20.verticalSpace,
-          const ProductsGridView(),
         ],
       ),
     );
+  }
+
+  @override
+  bool shouldRebuild(covariant SliverPersistentHeaderDelegate oldDelegate) {
+    return false;
   }
 }
