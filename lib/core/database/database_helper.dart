@@ -27,7 +27,7 @@ class DatabaseHelper {
   }
 
   Future<void> _onCreate(Database db, int version) async {
-    // 🟦 Categories Table
+    // Categories Table
     await db.execute('''
       CREATE TABLE ${DatabaseConstants.tableCategories} (
         ${DatabaseConstants.columnId} TEXT PRIMARY KEY,
@@ -36,7 +36,7 @@ class DatabaseHelper {
       )
     ''');
 
-    // 🟧 Products Table (linked to Category)
+    // Products Table (linked to Category)
     await db.execute('''
       CREATE TABLE ${DatabaseConstants.tableProducts} (
         ${DatabaseConstants.columnId} TEXT PRIMARY KEY,
@@ -54,7 +54,7 @@ class DatabaseHelper {
       )
     ''');
 
-    // 🟪 Features Table
+    // Features Table
     await db.execute('''
       CREATE TABLE ${DatabaseConstants.tableFeatures} (
         ${DatabaseConstants.columnId} TEXT PRIMARY KEY,
@@ -62,7 +62,7 @@ class DatabaseHelper {
       )
     ''');
 
-    // 🟥 Packages Table
+    // Packages Table
     await db.execute('''
       CREATE TABLE ${DatabaseConstants.tablePackages} (
         ${DatabaseConstants.columnId} TEXT PRIMARY KEY,
@@ -70,7 +70,7 @@ class DatabaseHelper {
       )
     ''');
 
-    // 🟫 PackageFeatures (Join Table)
+    // PackageFeatures
     await db.execute('''
       CREATE TABLE ${DatabaseConstants.tablePackageFeatures} (
         ${DatabaseConstants.columnPackageId} TEXT NOT NULL,
@@ -85,7 +85,6 @@ class DatabaseHelper {
       )
     ''');
 
-    // 🟩 Insert Categories
     await db.insert(DatabaseConstants.tableCategories, {
       DatabaseConstants.columnId: '1',
       DatabaseConstants.columnName: 'كل العروض',
@@ -129,7 +128,6 @@ class DatabaseHelper {
       DatabaseConstants.columnImageUrl: 'assets/images/home.png',
     });
 
-    // 🧱 Insert 20 Products
     final random = Random();
     final images = [
       'assets/images/shoes.png',

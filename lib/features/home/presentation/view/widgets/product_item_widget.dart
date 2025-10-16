@@ -73,7 +73,9 @@ class ProductItemWidget extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const FavoriteButtonWidget(),
+                      FavoriteButtonWidget(
+                        isFavorite: model.isFavorite,
+                      ),
                     ],
                   ),
                   8.verticalSpace,
@@ -124,7 +126,9 @@ class ProductItemWidget extends StatelessWidget {
                         ],
                       ),
                       const Spacer(),
-                      const AddToCartButtonWidget(),
+                      AddToCartButtonWidget(
+                        isInCart: model.addedToCart,
+                      ),
                       12.horizontalSpace,
                       Image.asset(
                         Assets.imagesProductImg,

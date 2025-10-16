@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_task/core/extensions/theming_extension.dart';
 
 class AddToCartButtonWidget extends StatefulWidget {
-  const AddToCartButtonWidget({super.key});
+  const AddToCartButtonWidget({super.key, this.isInCart});
+
+  final bool? isInCart;
 
   @override
   State<AddToCartButtonWidget> createState() => _AddToCartButtonWidgetState();
@@ -10,7 +12,13 @@ class AddToCartButtonWidget extends StatefulWidget {
 
 class _AddToCartButtonWidgetState extends State<AddToCartButtonWidget> {
 
-  bool isInCart = false;
+  late bool isInCart;
+
+  @override
+  void initState() {
+    isInCart = widget.isInCart ?? false;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
