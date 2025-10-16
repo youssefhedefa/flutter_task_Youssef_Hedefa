@@ -16,4 +16,6 @@ extension LocalizationExtension on BuildContext {
   String get contactUsForPackage => 'contact_us_for_package'.tr();
   String get salesTeam => 'sales_team'.tr();
   String get viewResults => 'view_results'.tr();
+  String get offerNow => 'offer_now'.tr();
+  String get freeShipping => 'free_shipping'.tr();
 }

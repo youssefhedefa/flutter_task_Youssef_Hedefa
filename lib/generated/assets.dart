@@ -6,7 +6,12 @@ class Assets {
   static const String iconsChat = 'assets/icons/chat.svg';
   static const String iconsHome = 'assets/icons/home.svg';
   static const String iconsMyAds = 'assets/icons/my_ads.svg';
+  static const String iconsOffer = 'assets/icons/offer.svg';
   static const String iconsProfile = 'assets/icons/profile.svg';
+  static const String iconsSellesCount = 'assets/icons/selles_count.svg';
+  static const String imagesMan = 'assets/images/man.png';
+  static const String imagesProductImg = 'assets/images/product_img.png';
+  static const String imagesSweetShirt = 'assets/images/sweet_shirt.png';
   static const String tajawalTajawalBold = 'assets/fonts/tajawal/Tajawal-Bold.ttf';
   static const String tajawalTajawalLight = 'assets/fonts/tajawal/Tajawal-Light.ttf';
   static const String tajawalTajawalMedium = 'assets/fonts/tajawal/Tajawal-Medium.ttf';
