@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_task/core/di/injection_container.dart';
 
 class InitServices {
   InitServices._internal();
@@ -14,6 +15,7 @@ class InitServices {
   Future<void> init() async {
     WidgetsFlutterBinding.ensureInitialized();
     await EasyLocalization.ensureInitialized();
+    initServiceLocator();
     makeStatusBarTransparent();
   }
 

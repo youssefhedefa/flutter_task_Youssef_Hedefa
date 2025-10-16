@@ -1,13 +1,41 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_task/core/database/database_service.dart';
+import 'package:flutter_task/core/di/injection_container.dart';
+import 'package:flutter_task/features/home/data/repo/home_repo.dart';
 import 'package:flutter_task/features/home/presentation/view/widgets/explore_offers_widget.dart';
 import 'package:flutter_task/features/home/presentation/view/widgets/image_text_filter_list_widget.dart';
 import 'package:flutter_task/features/home/presentation/view/widgets/offer_banner_widget.dart';
-import 'package:flutter_task/features/home/presentation/view/widgets/products_grid_view.dart' show ProductsGridView;
+import 'package:flutter_task/features/home/presentation/view/widgets/products_grid_view.dart'
+    show ProductsGridView;
 import 'package:flutter_task/features/home/presentation/view/widgets/text_filter_list_widget.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends StatefulWidget {
   const HomeView({super.key});
+
+  @override
+  State<HomeView> createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> {
+  @override
+  void initState() {
+    HomeReo(
+      databaseService: sl<DatabaseService>(),
+    ).fetchProducts(categoryId: null).then((value) {
+      value.fold(
+        (value) {
+          log(value);
+        },
+        (a) {
+          log(a.toString());
+        },
+      );
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {

@@ -9,9 +9,15 @@ class Assets {
   static const String iconsOffer = 'assets/icons/offer.svg';
   static const String iconsProfile = 'assets/icons/profile.svg';
   static const String iconsSellesCount = 'assets/icons/selles_count.svg';
+  static const String imagesCosmatics = 'assets/images/cosmatics.png';
+  static const String imagesHome = 'assets/images/home.png';
   static const String imagesMan = 'assets/images/man.png';
+  static const String imagesPhone = 'assets/images/Phone.png';
   static const String imagesProductImg = 'assets/images/product_img.png';
+  static const String imagesShemize = 'assets/images/shemize.png';
+  static const String imagesShoes = 'assets/images/shoes.png';
   static const String imagesSweetShirt = 'assets/images/sweet_shirt.png';
+  static const String imagesWatch = 'assets/images/watch.png';
   static const String tajawalTajawalBold = 'assets/fonts/tajawal/Tajawal-Bold.ttf';
   static const String tajawalTajawalLight = 'assets/fonts/tajawal/Tajawal-Light.ttf';
   static const String tajawalTajawalMedium = 'assets/fonts/tajawal/Tajawal-Medium.ttf';
