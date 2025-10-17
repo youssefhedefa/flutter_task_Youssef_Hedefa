@@ -76,5 +76,35 @@ abstract class AppTextStylesSchemes {
       fontWeight: FontWeight.w700,
       color: _lightColors.unselectedColor,
     ),
+    font16MediumGreyColor: TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w500,
+      color: _lightColors.unselectedColor,
+    ),
+    font12RegularGreyColor: TextStyle(
+      fontSize: 12,
+      fontWeight: FontWeight.w400,
+      color: _lightColors.unselectedColor,
+    ),
+    font14BoldPurpleColor: TextStyle(
+      fontSize: 14,
+      fontWeight: FontWeight.w700,
+      color: _lightColors.purpleColor,
+    ),
+    font14MediumPrimaryColor: TextStyle(
+      fontSize: 14,
+      fontWeight: FontWeight.w500,
+      color: _lightColors.primaryColor,
+    ),
+    font16BoldPrimaryColor: TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w700,
+      color: _lightColors.primaryColor,
+    ),
+    font24Medium: TextStyle(
+      fontSize: 24,
+      fontWeight: FontWeight.w500,
+      color: _lightColors.selectedColor,
+    ),
   );
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_task/core/components/enums/request_status_enum.dart';
-import 'package:flutter_task/core/components/widgets/CustomButtonWidget.dart';
+import 'package:flutter_task/core/components/widgets/custom_button_widget.dart';
 import 'package:flutter_task/core/constants/app_num_constants.dart';
 import 'package:flutter_task/core/di/injection_container.dart';
 import 'package:flutter_task/core/extensions/localization_extensions.dart';

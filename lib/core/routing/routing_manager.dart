@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_task/core/routing/custom_page_route.dart';
 import 'package:flutter_task/core/routing/routing_constances.dart';
 import 'package:flutter_task/features/add_ad/presentation/view/add_ad_view.dart';
+import 'package:flutter_task/features/home/presentation/view/filter_view.dart';
 import 'package:flutter_task/features/main_navigation/presentation/controllers/main_navigation_cubit/main_navigation_cubit.dart';
 import 'package:flutter_task/features/main_navigation/presentation/view/main_navigation.dart';
 
@@ -27,6 +28,10 @@ class AppRoutingManager {
       case AppRoutingConstants.addAdView:
         return CustomPageRoute(
           child: const AddAdView(),
+        );
+        case AppRoutingConstants.filterView:
+        return CustomPageRoute(
+          child: const FilterView(),
         );
       default:
         return null;

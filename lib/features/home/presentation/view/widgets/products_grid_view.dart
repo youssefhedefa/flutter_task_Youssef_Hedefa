@@ -4,7 +4,7 @@ import 'package:flutter_task/core/components/enums/request_status_enum.dart';
 import 'package:flutter_task/core/constants/app_num_constants.dart';
 import 'package:flutter_task/core/extensions/widget_extension.dart';
 import 'package:flutter_task/features/home/data/models/product_model.dart';
-import 'package:flutter_task/features/home/presentation/cubit/home_cubit.dart';
+import 'package:flutter_task/features/home/presentation/cubit/home_cubit/home_cubit.dart';
 import 'package:flutter_task/features/home/presentation/view/widgets/product_item_widget.dart';
 import 'package:flutter_task/generated/assets.dart';
 

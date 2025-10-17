@@ -2,25 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_task/core/di/injection_container.dart';
-import 'package:flutter_task/features/home/presentation/cubit/home_cubit.dart';
+import 'package:flutter_task/features/home/presentation/cubit/home_cubit/home_cubit.dart';
 import 'package:flutter_task/features/home/presentation/view/widgets/explore_offers_widget.dart';
 import 'package:flutter_task/features/home/presentation/view/widgets/image_text_filter_list_widget.dart';
 import 'package:flutter_task/features/home/presentation/view/widgets/offer_banner_widget.dart';
 import 'package:flutter_task/features/home/presentation/view/widgets/products_grid_view.dart';
 import 'package:flutter_task/features/home/presentation/view/widgets/text_filter_list_widget.dart';
 
-class HomeView extends StatefulWidget {
+class HomeView extends StatelessWidget {
   const HomeView({super.key});
-
-  @override
-  State<HomeView> createState() => _HomeViewState();
-}
-
-class _HomeViewState extends State<HomeView> {
-  @override
-  void initState() {
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {

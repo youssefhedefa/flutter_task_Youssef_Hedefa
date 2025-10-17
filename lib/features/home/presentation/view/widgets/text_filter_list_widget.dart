@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_task/core/components/enums/request_status_enum.dart';
 import 'package:flutter_task/core/constants/app_num_constants.dart';
 import 'package:flutter_task/core/extensions/widget_extension.dart';
-import 'package:flutter_task/features/home/presentation/cubit/home_cubit.dart';
+import 'package:flutter_task/features/home/presentation/cubit/home_cubit/home_cubit.dart';
 import 'package:flutter_task/features/home/presentation/view/widgets/text_filter_chip_widget.dart';
 
 class TextFilterListWidget extends StatefulWidget {

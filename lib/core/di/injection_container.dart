@@ -2,7 +2,8 @@ import 'package:flutter_task/core/database/database_helper.dart';
 import 'package:flutter_task/features/add_ad/data/repo/ads_repo.dart';
 import 'package:flutter_task/features/add_ad/presentation/cubit/ads_cubit.dart';
 import 'package:flutter_task/features/home/data/repo/home_repo.dart';
-import 'package:flutter_task/features/home/presentation/cubit/home_cubit.dart';
+import 'package:flutter_task/features/home/presentation/cubit/filter_cubit/filter_cubit.dart';
+import 'package:flutter_task/features/home/presentation/cubit/home_cubit/home_cubit.dart';
 import 'package:get_it/get_it.dart';
 import 'package:flutter_task/core/database/database_service.dart';
 
@@ -39,5 +40,9 @@ Future<void> initServiceLocator() async {
     () => AdsCubit(
       adsRepo: sl<AdsRepo>(),
     ),
+  );
+
+  sl.registerFactory<FilterCubit>(
+    () => FilterCubit(),
   );
 }
