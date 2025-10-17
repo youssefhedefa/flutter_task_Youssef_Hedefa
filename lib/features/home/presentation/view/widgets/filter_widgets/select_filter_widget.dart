@@ -50,7 +50,7 @@ class SelectFilterWidget extends StatelessWidget {
                 width: iconSize.w,
                 height: iconSize.h,
               ),
-              if(iconSize < 24)12.horizontalSpace,
+              6.horizontalSpace,
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,

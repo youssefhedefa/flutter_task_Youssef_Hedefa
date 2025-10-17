@@ -14,7 +14,7 @@ class CategorySectionWidget extends StatelessWidget {
       label: context.category,
       title: context.realEstate,
       subtitle: context.villasForSale,
-      iconSize: 34,
+      iconSize: 24,
       buttonChild: Text(
         context.change,
         style: appTextStyles.font14BoldPurpleColor,

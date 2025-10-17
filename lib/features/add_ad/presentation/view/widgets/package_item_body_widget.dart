@@ -54,6 +54,7 @@ class _PackageItemBodyWidgetState extends State<PackageItemBodyWidget> {
             children: List.generate(
               widget.features.length,
               (index) => Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CustomSvgBuilder(
                     path: icons[index],
@@ -61,20 +62,22 @@ class _PackageItemBodyWidgetState extends State<PackageItemBodyWidget> {
                     height: 24,
                     fit: BoxFit.cover,
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        ' ${widget.features[index]}',
-                        style: context.appTextStyles.font14Medium,
-                      ),
-                      if(widget.features[index] == 'تثبيت فى مقاول صحى') Text(
-                        ' ( خلال ال48 ساعة القادمة )',
-                        style: context.appTextStyles.font14Medium.copyWith(
-                          color: appColors.redColor,
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          ' ${widget.features[index]}',
+                          style: context.appTextStyles.font14Medium,
                         ),
-                      ),
-                    ],
+                        if(widget.features[index] == 'تثبيت فى مقاول صحى') Text(
+                          ' ( خلال ال48 ساعة القادمة )',
+                          style: context.appTextStyles.font14Medium.copyWith(
+                            color: appColors.redColor,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
