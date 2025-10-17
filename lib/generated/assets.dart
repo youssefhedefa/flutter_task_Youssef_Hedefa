@@ -3,15 +3,22 @@ class Assets {
   Assets._();
 
   static const String iconsAddAd = 'assets/icons/add_ad.svg';
+  static const String iconsBin = 'assets/icons/bin.svg';
+  static const String iconsBoost = 'assets/icons/boost.svg';
   static const String iconsChat = 'assets/icons/chat.svg';
+  static const String iconsGlobe = 'assets/icons/globe.svg';
   static const String iconsHome = 'assets/icons/home.svg';
   static const String iconsMyAds = 'assets/icons/my_ads.svg';
   static const String iconsOffer = 'assets/icons/offer.svg';
   static const String iconsProfile = 'assets/icons/profile.svg';
   static const String iconsSellesCount = 'assets/icons/selles_count.svg';
+  static const String iconsSpecial = 'assets/icons/special.svg';
+  static const String iconsTime = 'assets/icons/time.svg';
   static const String imagesCosmatics = 'assets/images/cosmatics.png';
+  static const String imagesFlagBackground = 'assets/images/flag_background.png';
   static const String imagesHome = 'assets/images/home.png';
   static const String imagesMan = 'assets/images/man.png';
+  static const String imagesNumberOfViewsContainer = 'assets/images/number_of_views_container.png';
   static const String imagesPhone = 'assets/images/Phone.png';
   static const String imagesProductImg = 'assets/images/product_img.png';
   static const String imagesShemize = 'assets/images/shemize.png';

@@ -9,6 +9,7 @@ class AppTextStyles extends ThemeExtension<AppTextStyles> {
   final TextStyle font12RegularSuccessColor;
   final TextStyle font12Medium;
 
+  final TextStyle font14RegularGreyColor;
   final TextStyle font14Medium;
   final TextStyle font14MediumOrangeColor;
   final TextStyle font14MediumRedColor;
@@ -16,11 +17,14 @@ class AppTextStyles extends ThemeExtension<AppTextStyles> {
 
   final TextStyle font16Medium;
   final TextStyle font16BoldGreyColor;
+  final TextStyle font16BoldOrangeColor;
+  final TextStyle font16Bold;
 
 
   const AppTextStyles({
     required this.font12Regular,
     required this.font12Medium,
+    required this.font14RegularGreyColor,
     required this.font14MediumOrangeColor,
     required this.font14MediumGreyColor,
     required this.font16Medium,
@@ -30,6 +34,8 @@ class AppTextStyles extends ThemeExtension<AppTextStyles> {
     required this.font12RegularSuccessColor,
     required this.font14Medium,
     required this.font14MediumRedColor,
+    required this.font16Bold,
+    required this.font16BoldOrangeColor,
   });
 
   @override
@@ -46,6 +52,9 @@ class AppTextStyles extends ThemeExtension<AppTextStyles> {
       font14Medium: font14Medium,
       font14MediumRedColor: font14MediumRedColor,
       font12Medium: font12Medium,
+      font14RegularGreyColor: font14RegularGreyColor,
+      font16Bold: font16Bold,
+      font16BoldOrangeColor: font16BoldOrangeColor,
     );
   }
 
@@ -69,6 +78,9 @@ class AppTextStyles extends ThemeExtension<AppTextStyles> {
       font14Medium: _lerpTextStyle(font14Medium, other.font14Medium, t),
       font14MediumRedColor: _lerpTextStyle(font14MediumRedColor, other.font14MediumRedColor, t),
       font12Medium: _lerpTextStyle(font12Medium, other.font12Medium, t),
+      font14RegularGreyColor: _lerpTextStyle(font14RegularGreyColor, other.font14RegularGreyColor, t),
+      font16Bold: _lerpTextStyle(font16Bold, other.font16Bold, t),
+      font16BoldOrangeColor: _lerpTextStyle(font16BoldOrangeColor, other.font16BoldOrangeColor, t),
     );
   }
 

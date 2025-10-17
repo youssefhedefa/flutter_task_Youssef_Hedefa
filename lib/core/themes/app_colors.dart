@@ -8,6 +8,7 @@ class AppColors extends ThemeExtension<AppColors> {
   final Color redColor;
   final Color successColor;
   final Color borderColor;
+  final Color purpleColor;
 
   const AppColors({
     required this.primaryColor,
@@ -17,6 +18,7 @@ class AppColors extends ThemeExtension<AppColors> {
     required this.redColor,
     required this.successColor,
     required this.borderColor,
+    required this.purpleColor,
   });
 
   @override
@@ -29,6 +31,7 @@ class AppColors extends ThemeExtension<AppColors> {
       redColor: redColor,
       successColor: successColor,
       borderColor: borderColor,
+      purpleColor: purpleColor,
     );
   }
 
@@ -48,6 +51,7 @@ class AppColors extends ThemeExtension<AppColors> {
       redColor: _lerpColor(redColor, other.redColor, t),
       successColor: _lerpColor(successColor, other.successColor, t),
       borderColor: _lerpColor(borderColor, other.borderColor, t),
+      purpleColor: _lerpColor(purpleColor, other.purpleColor, t),
     );
   }
 

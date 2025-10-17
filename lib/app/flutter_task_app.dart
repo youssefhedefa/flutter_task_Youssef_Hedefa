@@ -2,8 +2,9 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_task/core/constants/app_string_constants.dart';
+import 'package:flutter_task/core/routing/routing_constances.dart';
+import 'package:flutter_task/core/routing/routing_manager.dart';
 import 'package:flutter_task/core/themes/app_themes.dart';
-import 'package:flutter_task/features/main_navigation/presentation/view/main_navigation.dart';
 
 class FlutterTaskApp extends StatelessWidget {
   const FlutterTaskApp({super.key});
@@ -11,7 +12,7 @@ class FlutterTaskApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(360, 690),
+      designSize: const Size(360, 690),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) {
@@ -24,10 +25,10 @@ class FlutterTaskApp extends StatelessWidget {
           theme: AppThemes().lightTheme,
           darkTheme: AppThemes().darkTheme,
           themeMode: ThemeMode.light,
-          home: child,
+          initialRoute: AppRoutingConstants.mainNavigationView,
+          onGenerateRoute: AppRoutingManager().onGenerateRoute,
         );
       },
-      child: const MainNavigationView(),
     );
   }
 }

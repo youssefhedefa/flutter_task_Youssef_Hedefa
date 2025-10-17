@@ -18,4 +18,8 @@ extension LocalizationExtension on BuildContext {
   String get viewResults => 'view_results'.tr();
   String get offerNow => 'offer_now'.tr();
   String get freeShipping => 'free_shipping'.tr();
+  String get chooseYourPackages => 'choose_your_packages'.tr();
+  String get selectFromPremiumPackages => 'select_from_premium_packages'.tr();
+  String get doubleViews => 'double_views'.tr();
+
 }

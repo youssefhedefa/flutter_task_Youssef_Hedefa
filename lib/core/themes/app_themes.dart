@@ -22,6 +22,10 @@ class AppThemes {
         primary: colors.primaryColor,
         error: colors.redColor,
       ),
+      appBarTheme: const AppBarTheme(
+        backgroundColor: Colors.white,
+        surfaceTintColor: Colors.white,
+      ),
       hintColor: colors.unselectedColor,
       iconTheme: IconThemeData(color: colors.selectedColor),
       scaffoldBackgroundColor: Colors.white,

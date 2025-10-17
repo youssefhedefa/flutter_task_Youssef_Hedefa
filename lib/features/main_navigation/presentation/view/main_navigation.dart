@@ -13,18 +13,15 @@ class MainNavigationView extends StatefulWidget {
 class _MainNavigationViewState extends State<MainNavigationView> {
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => MainNavigationCubit(),
-      child: BlocBuilder<MainNavigationCubit, MainNavigationState>(
-        builder: (context, state) {
-          return Scaffold(
-              body: SafeArea(child: state.views[state.currentIndex]),
-              bottomNavigationBar: CustomBottomNavBar(
-                state: state,
-              ),
-          );
-        },
-      ),
+    return BlocBuilder<MainNavigationCubit, MainNavigationState>(
+      builder: (context, state) {
+        return Scaffold(
+          body: SafeArea(child: state.views[state.currentIndex]),
+          bottomNavigationBar: CustomBottomNavBar(
+            state: state,
+          ),
+        );
+      },
     );
   }
 }

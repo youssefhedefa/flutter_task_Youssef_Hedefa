@@ -1,7 +1,7 @@
 abstract class DatabaseConstants {
   // Database Info
   static const String databaseName = 'app_database.db';
-  static const int databaseVersion = 1;
+  static const int databaseVersion = 3;
 
   // Table Names
   static const String tableCategories = 'categories';
@@ -10,7 +10,7 @@ abstract class DatabaseConstants {
   static const String tablePackages = 'packages';
   static const String tablePackageFeatures = 'package_features';
 
-  // Common Column Names
+  // Common Columns
   static const String columnId = 'id';
   static const String columnName = 'name';
 
@@ -29,6 +29,10 @@ abstract class DatabaseConstants {
   // Feature Columns
   static const String columnFeatureName = 'featureName';
 
+  // Package Columns
+  static const String columnPrice = 'price';
+  static const String columnNumberOfDoubles = 'numberOfDoubles';
+  static const String columnFlag = 'flag';
 
   // PackageFeatures Join Table Columns
   static const String columnPackageId = 'packageId';

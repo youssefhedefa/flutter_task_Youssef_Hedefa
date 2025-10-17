@@ -11,6 +11,7 @@ abstract class AppColorsSchemes {
     redColor: Color(0xFFFF4144),
     successColor: Color(0xff3A813F),
     borderColor: Color(0xFFE6E6E6),
+    purpleColor: Color(0xFF3B4CF2),
   );
 
   static AppColors darkColor = lightColor;
